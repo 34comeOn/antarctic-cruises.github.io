@@ -8,13 +8,18 @@
   min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
 
-  .header,
-  .footer {
-    flex-shrink: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr 138px;
+  grid-template-columns: 1fr;
+
+  @include vp-1365 {
+    grid-template-rows: min-content 1fr 120px;
+    grid-template-columns: 1fr;
   }
 
-  main {
-    flex-grow: 1;
+  @include vp-767 {
+    grid-template-rows: min-content 1fr 283px;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -65,4 +70,9 @@
 .no-transition {
   /* stylelint-disable-next-line */
   transition: none !important;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
 }
