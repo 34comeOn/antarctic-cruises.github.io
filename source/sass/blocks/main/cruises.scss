@@ -1,0 +1,56 @@
+.cruises__item {
+  position: relative;
+  background-color: $color-dark-blue;
+  width: 260px;
+  height: 386px;
+  box-sizing: border-box;
+
+}
+
+.cruises__card-title {
+  position: absolute;
+  color: $color-default-white;
+  bottom: 2px;
+  left: 31px;
+  font-family: $ff-placeholder;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.cruises__item:hover .cruises__card-title {
+  top: 2px;
+}
+
+.cruises__item:hover .cruises__cover-wrapper {
+  display: none;
+}
+
+.cruises__info-wrapper {
+  padding: 35px 25px;
+  padding-top: 55px;
+
+}
+.cruises__info-title {
+  color: $color-default-white;
+  font-family: $ff-placeholder;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 0;
+}
+
+.cruises__info-text {
+  color: $color-grey;
+  font-family: $ff-placeholder;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: block;
+  margin-top: -18px;
+  padding-bottom: 12px;
+}
+
+.cruises__info-link {
+  margin-top: 15px;
+}

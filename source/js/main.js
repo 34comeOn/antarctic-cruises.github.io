@@ -44,3 +44,18 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+const mainWrapperElement = document.querySelector('.wrapper');
+const navToggleElement = document.querySelector('.header__toggle');
+
+mainWrapperElement.classList.remove('wrapper--nojs');
+
+navToggleElement.addEventListener('click', function () {
+  if (mainWrapperElement.classList.contains('wrapper--closed')) {
+    mainWrapperElement.classList.remove('wrapper--closed');
+    mainWrapperElement.classList.add('wrapper--opened');
+  } else {
+    mainWrapperElement.classList.add('wrapper--closed');
+    mainWrapperElement.classList.remove('wrapper--opened');
+  }
+});

@@ -12,16 +12,16 @@
 
 
   <body>
-    <div class="wrapper wrapper--opened">
+    <div class="wrapper wrapper--opened wrapper--nojs">
       <header class="header">
         <div class="container header__container">
           <div class="header__toggle-wrapper">
             <a class="header__link" href="#" aria-label="логотип турфирмы">
               <div class="header__logo-wrapper">
                 <svg class="header__logo-mobile" width="42" height="22" viewBox="0 0 42 22" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.54211 18.0197L8.80358 7.26166L11.0637 8.42713L16.4415 0L19.7928 3.8551L21.0399 2.86887L25.872 8.78584L29.3013 4.84111L38.8875 18.0197L29.652 6.81358L28.249 11.5202L29.535 15.2407L21.2736 4.25849L21.1842 8.00563L25.872 18.0197L17.1038 2.51017L19.6369 10.8926L16.0909 2.73432L14.1424 8.15829L14.5319 4.61695L9.66076 17.3922L10.2452 12.0132L8.21887 9.86169L0.54211 18.0197Z" fill="#F9FBFD"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M41.6649 19.7024C28.5846 9.51096 8.22544 23.522 0 18.1188C9.04339 25.7756 30.1812 12.832 41.6649 19.7024Z" fill="#F9FBFD"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M42 20.5038C31.7374 14.1941 16.4741 22.9749 8.65134 20.9415C17.128 24.9111 32.9089 16.1156 42 20.5038Z" fill="#F9FBFD"/>
+                  <path class="header__logo-path" fill-rule="evenodd" clip-rule="evenodd" d="M0.54211 18.0197L8.80358 7.26166L11.0637 8.42713L16.4415 0L19.7928 3.8551L21.0399 2.86887L25.872 8.78584L29.3013 4.84111L38.8875 18.0197L29.652 6.81358L28.249 11.5202L29.535 15.2407L21.2736 4.25849L21.1842 8.00563L25.872 18.0197L17.1038 2.51017L19.6369 10.8926L16.0909 2.73432L14.1424 8.15829L14.5319 4.61695L9.66076 17.3922L10.2452 12.0132L8.21887 9.86169L0.54211 18.0197Z" fill="#F9FBFD"/>
+                  <path class="header__logo-path" fill-rule="evenodd" clip-rule="evenodd" d="M41.6649 19.7024C28.5846 9.51096 8.22544 23.522 0 18.1188C9.04339 25.7756 30.1812 12.832 41.6649 19.7024Z" fill="#F9FBFD"/>
+                  <path class="header__logo-path" fill-rule="evenodd" clip-rule="evenodd" d="M42 20.5038C31.7374 14.1941 16.4741 22.9749 8.65134 20.9415C17.128 24.9111 32.9089 16.1156 42 20.5038Z" fill="#F9FBFD"/>
                 </svg>
                 <svg class="header__logo-tablet" width="38" height="20" viewBox="0 0 38 20" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0.49048 16.3816L7.96515 6.60151L10.01 7.66103L14.8757 0L17.9077 3.50464L19.0361 2.60806L23.408 7.98712L26.5107 4.40101L35.184 16.3816L26.828 6.19417L25.5587 10.4729L26.7222 13.8552L19.2475 3.87136L19.1666 7.27784L23.408 16.3816L15.4749 2.28197L17.7668 9.90238L14.5584 2.48574L12.7955 7.41663L13.1479 4.19722L8.74069 15.8111L9.26943 10.9211L7.43612 8.96517L0.49048 16.3816Z" fill="#F9FBFD"/>
@@ -32,31 +32,31 @@
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" fill="#F9FBFD"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" fill="#F9FBFD"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" fill="#F9FBFD"/>
-                </svg> 
+                </svg>
               </div>
             </a>
             <button class="header__toggle button" type="button" aria-label="Кнопка открыть и закрыть меню">
             </button>
           </div>
           <nav class="header__navigation navigation">
-            <ul class="navigation__list list">
+            <ul class="navigation__list navigation__list--header list">
               <li class="navigation__item">
-                <a class="navigation__link content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#">
                   Преимущества
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#">
                   Направления
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#">
                   Ближайшие круизы
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#">
                   Контакты
                 </a>
               </li>
@@ -67,17 +67,345 @@
 
       <main class="main">
         <section class="intro">
-          <div class="container intro__container">
+          <div class="intro__container container">
             <h1 class="intro__title">
-              Круизы&Tab;<br class="intro__br-mobile"> в Антарктику 
+              Круизы&Tab;<br class="intro__br-mobile"> в Антарктику
             </h1>
             <span class="intro__slogan">
               Волшебный мир&Tab;<br class="intro__br-mobile"> айсбергов и пингвинов
             </span>
           </div>
         </section>
+
+        <section class="about">
+          <div class="about__container container">
+            <div class="about__description-wrapper">
+              <h2 class="about__title">
+                Путешествие&Tab;<br class="about__br-tablet"> на край Земли
+              </h2>
+              <p class="about__text">
+                Это волшебное путешествие поможет вам познакомиться поближе
+                с удивительным миром Антарктики. Наш круизный лайнер отвезет вас
+                на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.
+              </p>
+            </div>
+            <div class="about__image-wrapper">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/gallery/content/intro-mobile@1x.jpg 1x">
+                <source media="(max-width: 1170px)" srcset="img/gallery/content/intro-tablet@1x.jpg 1x">
+                <img class="about__image" width="560" height="301" src="img/gallery/content/intro-desktop@1x.jpg" alt="Фото трех пингвинов на снегу">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="advantages">
+          <div class="advantages__container container">
+            <h2 class="advantages__section-title">
+              Преимущества
+            </h2>
+            <ul class="advantages__list list">
+              <li class="advantages__item">
+                <div class="advantages__icon-wrapper">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/svg/adv-ship.svg">
+                    <img class="advantages__icon advantages__icon-ship" width="27" height="32" src="img/svg/adv-ship-desktop.svg" alt="#">
+                  </picture>
+                </div>
+                <h3 class="advantages__title">
+                  Небольшой&Tab;<br class="advantages__br-mobile"> круизный лайнер
+                </h3>
+                <p class="advantages__text">
+                  Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума&Tab;<br class="advantages__br-mobile"> и очередей&Tab;<br class="advantages__br-tablet"> и даст возможность насладиться видами&Tab;<br class="advantages__br-tablet"> и природой.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon-wrapper">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/svg/adv-all.svg">
+                    <img class="advantages__icon advantages__icon-all" width="38" height="21" src="img/svg/adv-all-desktop.svg" alt="#">
+                  </picture>
+                </div>
+                <h3 class="advantages__title">
+                  Система&Tab;<br class="advantages__br-tablet">&Tab;<br class="advantages__br-mobile"> все включено
+                </h3>
+                <p class="advantages__text">
+                  Все наши круизы работают&Tab;<br class="advantages__br">&Tab;<br class="advantages__br-mobile"> по системе “Все Включено”. Великолепные блюда&Tab;<br class="advantages__br-mobile"> и безлимитный бар доступны&Tab;<br class="advantages__br-mobile"> для вас&Tab;<br class="advantages__br-tablet"> 24 часа.
+                </p>
+              </li>
+              <li class="advantages__item">
+                <div class="advantages__icon-wrapper">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/svg/adv-boat.svg">
+                    <img class="advantages__icon advantages__icon-boat" width="42" height="15" src="img/svg/adv-boat-desktop.svg" alt="#">
+                  </picture>
+                </div>
+                <h3 class="advantages__title">
+                  Экскурсионные&Tab;<br class="advantages__br-mobile"> туры на Zodiac
+                </h3>
+                <p class="advantages__text">
+                  Экскурсионные туры&Tab;<br class="advantages__br-tablet"> к берегам Антарктиды совершаются&Tab;<br class="advantages__br">&Tab;<br class="advantages__br-mobile"> на оборудованных&Tab;<br class="advantages__br-tablet"> лодках&Tab;<br class="advantages__br-mobile"> типа&Tab;<br class="advantages__br"> Zodiac&Tab;<br class="advantages__br-tablet"> в сопровождении&Tab;<br class="advantages__br"> опытных экскурсоводов.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="cruises">
+          <div class="cruises__container container">
+            <h2 class="cruises__section-title">
+              Ближайшие круизы
+            </h2>
+            <ul class="cruises__list list">
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз &#x201C;Астория&#x201D;
+                </h3>
+                <!-- <div class="cruises__cover-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/astoria-mobile@1x.jpg 1x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/astoria-tablet@1x.jpg 1x">
+                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/astoria-desktop@1x.jpg" alt="">
+                  </picture>
+                </div> -->
+                <div class="cruises__info-wrapper">
+                  <h4 class="cruises__info-title">
+                    Маршрут
+                  </h4>
+                  <span class="cruises__info-text">
+                    Аргентина - Фолклендские острова - Антарктида
+                  </span>
+                  <h4 class="cruises__info-title">
+                    Порт отправления
+                  </h4>
+                  <span class="cruises__info-text">
+                    Ушуайя
+                  </span>
+                  <h4 class="cruises__info-title">
+                    Продолжительность
+                  </h4>
+                  <span class="cruises__info-text">
+                    11 дней
+                  </span>
+                  <h4 class="cruises__info-title">
+                    Цена
+                  </h4>
+                  <span class="cruises__info-text">
+                    от 11500 $
+                  </span>
+                  <a class="cruises__info-link button" href="#">
+                    Забронировать
+                  </a>
+                </div>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз &#x201C;Элайн&#x201D;
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Аргентина - Фолклендские острова - Антарктида - Чили
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Буэнос-Айрес
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  20 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 14500 $
+                </span>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз "Атлантис"
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Ушуайя
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  15 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 14500 $
+                </span>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз "Одиссей"
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Чили - Антарктида
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Пунта-Аренас
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  13 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 9700 $
+                </span>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз "Олимпия"
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Аргентина - Фолклендские острова - Южная Георгия - Антарктида
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Ушуайя
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  21 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 18600 $
+                </span>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз "Аврора"
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Аргентина - Фолклендские острова - Антарктида
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Аргентина - Антарктида - Чили
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  14 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 11700 $
+                </span>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз "Леонор"
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Чили - Южная Георгия - Антарктида - Аргентина
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Пунта-Аренас
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  17 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 12500 $
+                </span>
+              </li>
+              <li class="cruises__item">
+                <h3 class="cruises__card-title">
+                  Круиз "Минион - 1"
+                </h3>
+                <h4 class="cruises__info-title">
+                  Маршрут
+                </h4>
+                <span class="cruises__info-text">
+                  Аргентина - Антарктида
+                </span>
+                <h4 class="cruises__info-title">
+                  Порт отправления
+                </h4>
+                <span class="cruises__info-text">
+                  Ушуайя
+                </span>
+                <h4 class="cruises__info-title">
+                  Продолжительность
+                </h4>
+                <span class="cruises__info-text">
+                  11 дней
+                </span>
+                <h4 class="cruises__info-title">
+                  Цена
+                </h4>
+                <span class="cruises__info-text">
+                  от 12300 $
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
-      
+
       <footer class="footer">
         <div class="container footer__container">
           <a class="footer__link" href="#" aria-label="логотип турфирмы">
@@ -96,7 +424,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" fill="#F9FBFD"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" fill="#F9FBFD"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" fill="#F9FBFD"/>
-              </svg> 
+              </svg>
             </div>
           </a>
           <nav class="footer__navigation navigation">
@@ -140,7 +468,7 @@
               </a>
             </li>
           </ul>
-        </div>  
+        </div>
       </footer>
 
     <script src="js/vendor.min.js"></script>

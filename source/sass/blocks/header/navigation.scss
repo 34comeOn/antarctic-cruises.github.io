@@ -2,22 +2,35 @@
     display: flex;
 
     @include vp-767 {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+}
+
+.navigation__list--header {
+    @include vp-767 {
         position: absolute;
         top: 0;
         right: 0;
         flex-direction: column;
         background-color: $color-default-white;
-        z-index: 2;
+        z-index: -1;
     }
 }
 
-.wrapper--closed .navigation__list {
+.wrapper--nojs .navigation__list--header {
+    @include vp-767 {
+        position: static;
+    }
+}
+
+.wrapper--closed .navigation__list--header {
     @include vp-767 {
         display: none;
     }
 }
 
-.wrapper--opened .navigation__list {
+.wrapper--opened .navigation__list--header {
     @include vp-767 {
         display: flex;
         width: 285px;
@@ -30,12 +43,13 @@
     margin-left: 36px;
     width: max-content;
 
-    @include vp-1365 {
-        margin-left: 16px;
+    @include vp-1023 {
+        margin-left: 22px;
     }
 
     @include vp-767 {
         padding-bottom: 10px;
+        margin-left: 22px;
     }
 }
 
@@ -43,18 +57,35 @@
     color: $color-default-white;
     font-size: 16px;
     line-height: 20px;
+    position: relative;
 
-    @include vp-1365 {
+    &:hover{
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: -webkit-fill-available;
+            background-color: $color-default-white;
+            top: 23px;
+            left: 0;
+        }
+    }
+
+    @include vp-1023 {
         font-size: 15px;
         font-size: 14px;
         line-height: 17px;
     }
+}
 
+.navigation__link--header {
     @include vp-767 {
         color: $color-default-black;
         font-size: 18px;
         line-height: 22px;
         font-family: $ff-placeholder-semibold;
         font-weight: 500;
+        margin-left: 20px;
     }
 }

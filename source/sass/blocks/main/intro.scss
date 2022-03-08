@@ -2,7 +2,7 @@
     padding-top: 260px;
     padding-bottom: 276px;
     margin: 0 auto;
-    max-width: 1920px;
+    max-width: 1366px;
     background-color: lightblue;
     height: 650px;
     background-image: url("../img/gallery/background/main-background-desktop@1x.jpg");
@@ -10,8 +10,9 @@
     background-position: bottom center;
     background-size: cover;
 
-    @include vp-1365 {
+    @include vp-1023 {
         padding-bottom: 274px;
+        height: 638px;
         min-width: 768px;
         background-image: url("../img/gallery/background/main-background-tablet@1x.jpg");
     }
@@ -34,17 +35,17 @@
     font-weight: 700;
 
 
-    @include vp-1365 {
+    @include vp-1023 {
         font-size: 50px;
         line-height: 12px;
         padding-left: 0;
+        letter-spacing: 0;
     }
 
     @include vp-767 {
         font-size: 36px;
         line-height: 45px;
         width: 265px;
-        letter-spacing: 0;
     }
 }
 
@@ -54,7 +55,7 @@
     line-height: 24px;
     color: $color-default-white;
 
-    @include vp-1365 {
+    @include vp-1023 {
         font-size: 18px;
         padding-left: 0;
     }

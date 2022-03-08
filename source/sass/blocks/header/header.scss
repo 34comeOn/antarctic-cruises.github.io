@@ -10,12 +10,21 @@
   align-items: center;
   justify-content: space-between;
 
-  @include vp-1365 {
+  @include vp-1023 {
     height: 80px;
   }
 
   @include vp-767 {
     height: 62px;
+  }
+}
+
+.wrapper--nojs .header__container {
+  @include vp-767 {
+    height: min-content;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -26,10 +35,15 @@
   position: relative;
 }
 
+.wrapper--nojs .header__toggle-wrapper {
+  @include vp-767 {
+  }
+}
+
 .header__logo-desktop {
   display: block;
 
-  @include vp-1365 {
+  @include vp-1023 {
     display: none;
   }
 }
@@ -37,7 +51,7 @@
 .header__logo-tablet {
   display: none;
 
-  @include vp-1365 {
+  @include vp-1023 {
     display: block;
   }
 
@@ -63,6 +77,18 @@
     position: absolute;
     top: 0;
     right: 210px;
+  }
+}
+
+.wrapper--nojs .header__logo-mobile {
+  @include vp-767 {
+    position: static;
+  }
+}
+
+.wrapper--opened .header__logo-path {
+  @include vp-767 {
+    fill: black;
   }
 }
 
@@ -117,6 +143,6 @@
   }
 }
 
-.header__wrapper--nojs .header__toggle {
+.wrapper--nojs .header__toggle {
   display: none;
 }
