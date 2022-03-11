@@ -193,4 +193,8 @@
   @include vp-767 {
     width: 220px;
   }
+
+  &:hover {
+    background-color: $color-dark-grey;
+  }
 }
