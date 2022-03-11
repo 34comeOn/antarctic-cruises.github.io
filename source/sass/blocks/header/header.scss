@@ -35,11 +35,6 @@
   position: relative;
 }
 
-// .wrapper--nojs .header__toggle-wrapper {
-//   @include vp-767 {
-//   }
-// }
-
 .header__logo-desktop {
   display: block;
 
@@ -107,8 +102,8 @@
 .wrapper--closed .header__toggle::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 4px;
+  top: 4px;
+  left: 6px;
   width: 24px;
   height: 1px;
   background-color: $color-default-white;

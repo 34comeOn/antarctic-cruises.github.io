@@ -17,7 +17,7 @@
 
   @include vp-767 {
     padding-top: 30px;
-    padding-bottom: 65px;
+    padding-bottom: 68px;
     min-width: 320px;
     background-image: url("../img/gallery/background/adv-background-mobile@1x.jpg");
   }
@@ -35,6 +35,8 @@
 
   @include vp-767 {
     font-size: 24px;
+    padding-bottom: 6px;
+    padding-top: 4px;
   }
 }
 
@@ -70,6 +72,14 @@
   height: 32px;
   display: flex;
   align-items: center;
+
+  @include vp-1023 {
+    height: 28px;
+  }
+
+  @include vp-767 {
+    height: 30px;
+  }
 }
 
 .advantages__icon-ship {

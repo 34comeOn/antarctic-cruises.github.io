@@ -29,8 +29,8 @@
   }
 
   @include vp-767 {
-    padding-top: 185px;
-    padding-bottom: 244px;
+    padding-top: 71px;
+    padding-bottom: 65px;
     min-width: 320px;
     background-image: url("../img/gallery/background/book-background-mobile@1x.jpg");
   }
@@ -69,6 +69,7 @@
   }
 
   @include vp-767 {
+    text-align: center;
     font-size: 24px;
     line-height: 31px;
   }
@@ -82,6 +83,13 @@
   @include vp-1023 {
     text-align: center;
     padding-bottom: 34px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: -5px;
+    padding-bottom: 17px;
   }
 }
 
@@ -99,6 +107,14 @@
   @include vp-1023 {
     margin: 0 auto;
   }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 403px;
+    min-width: 290px;
+    height: min-content;
+    padding: 40px 30px;
+  }
 }
 
 .booking__input-title {
@@ -109,6 +125,11 @@
   font-weight: 500;
   margin-top: -6px;
   padding-bottom: 9px;
+
+  @include vp-767 {
+    text-align: center;
+    line-height: 26px;
+  }
 }
 
 .booking__list {
@@ -122,6 +143,10 @@
 
 .booking__item-checkbox {
   margin-top: -3px;
+
+  @include vp-767 {
+    padding-left: 24px;
+  }
 }
 
 .booking__input {
@@ -131,6 +156,11 @@
   border: none;
   font-size: 14px;
   padding-left: 17px;
+
+  @include vp-767 {
+    width: 100%;
+    min-width: 230px;
+  }
 }
 
 .booking__checkbox {
@@ -156,6 +186,19 @@
     background-image: url("/img/svg/checkbox.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @include vp-767 {
+      width: 20px;
+      height: 20px;
+      top: 2px;
+    }
+  }
+
+  @include vp-767 {
+    line-height: 12px;
+    width: 157px;
+    padding-left: 4px;
+    display: block;
   }
 }
 
@@ -176,7 +219,7 @@
 .booking__br-desktop {
   display: block;
 
-  @include vp-374 {
+  @include vp-767 {
     display: none;
   }
 }
@@ -184,7 +227,7 @@
 .booking__br-mobile {
   display: none;
 
-  @include vp-374 {
+  @include vp-767 {
     display: block;
   }
 }

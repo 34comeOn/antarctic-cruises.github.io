@@ -44,7 +44,7 @@
   width: max-content;
 
   @include vp-1023 {
-    margin-left: 22px;
+    margin-left: 26px;
   }
 
   @include vp-767 {
@@ -85,5 +85,32 @@
     font-family: $ff-placeholder-semibold;
     font-weight: 500;
     margin-left: 20px;
+  }
+}
+
+.navigation__link--footer {
+  @include vp-1094 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-1023 {
+    font-size: 13px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.navigation__item--footer {
+  @include vp-1023 {
+    margin-left: 18px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    line-height: 22px;
   }
 }

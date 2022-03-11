@@ -84,13 +84,7 @@ const validateInput = (element, re, text) => {
 
     nameInputArray.forEach((word) => {
 
-      if (!re.test(word) || booleanNameInputArray.includes(false) || !nameInputElement.value || !phoneInputElement.value || !emailInputElement.value) {
-        formSubmitElement.setAttribute('disabled', 'disabled');
-      } else {
-        formSubmitElement.removeAttribute('disabled');
-      }
-
-      if (!re.test(word)) {
+      if (!re.test(word) || booleanNameInputArray.includes(false)) {
         element.setCustomValidity(text);
       } else {
         element.setCustomValidity('');
@@ -101,10 +95,14 @@ const validateInput = (element, re, text) => {
 };
 
 labelElement.addEventListener('click', function () {
-  if (checkboxElement.hasAttribute('checked')) {
-    checkboxElement.removeAttribute('checked');
-  } else {
+  if (!checkboxElement.hasAttribute('checked')) {
     checkboxElement.setAttribute('checked', 'checked');
+    if (formSubmitElement.hasAttribute('disabled')) {
+      formSubmitElement.removeAttribute('disabled');
+    }
+  } else {
+    checkboxElement.removeAttribute('checked');
+    formSubmitElement.setAttribute('disabled', 'disabled');
   }
 });
 

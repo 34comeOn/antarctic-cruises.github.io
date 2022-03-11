@@ -18,8 +18,9 @@
   }
 
   @include vp-767 {
-    padding-top: 185px;
+    padding-top: 153px;
     padding-bottom: 244px;
+    height: 500px;
     min-width: 320px;
     background-image: url("../img/gallery/background/main-background-mobile@1x.jpg");
   }
@@ -29,7 +30,6 @@
   padding-left: 95px;
   font-size: 54px;
   line-height: 16px;
-  letter-spacing: 2px;
   color: $color-default-white;
   font-family: $ff-placeholder-bold;
   font-weight: 700;
@@ -39,7 +39,6 @@
     font-size: 50px;
     line-height: 12px;
     padding-left: 0;
-    letter-spacing: 0;
   }
 
   @include vp-767 {
@@ -58,6 +57,12 @@
   @include vp-1023 {
     font-size: 18px;
     padding-left: 0;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    margin-top: -16px;
+    display: block;
   }
 }
 
