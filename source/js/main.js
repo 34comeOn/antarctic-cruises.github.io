@@ -1,50 +1,3 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-
-// ---------------------------------
-
-window.addEventListener('DOMContentLoaded', () => {
-
-  // Utils
-  // ---------------------------------
-
-  iosVhFix();
-
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
-});
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✔️
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используейтся matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)
-
 const mainWrapperElement = document.querySelector('.wrapper');
 const navToggleElement = document.querySelector('.header__toggle');
 const nameInputElement = document.querySelector('.name-input');
@@ -57,12 +10,12 @@ const labelElement = document.querySelector('.booking__label');
 mainWrapperElement.classList.remove('wrapper--nojs');
 
 navToggleElement.addEventListener('click', function () {
-  if (mainWrapperElement.classList.contains('wrapper--closed')) {
-    mainWrapperElement.classList.remove('wrapper--closed');
-    mainWrapperElement.classList.add('wrapper--opened');
+  if (mainWrapperElement.classList.contains('wrapper--menu-closed')) {
+    mainWrapperElement.classList.remove('wrapper--menu-closed');
+    mainWrapperElement.classList.add('wrapper--menu-opened');
   } else {
-    mainWrapperElement.classList.add('wrapper--closed');
-    mainWrapperElement.classList.remove('wrapper--opened');
+    mainWrapperElement.classList.add('wrapper--menu-closed');
+    mainWrapperElement.classList.remove('wrapper--menu-opened');
   }
 });
 
@@ -95,14 +48,12 @@ const validateInput = (element, re, text) => {
 };
 
 labelElement.addEventListener('click', function () {
-  if (!checkboxElement.hasAttribute('checked')) {
-    checkboxElement.setAttribute('checked', 'checked');
-    if (formSubmitElement.hasAttribute('disabled')) {
-      formSubmitElement.removeAttribute('disabled');
-    }
-  } else {
-    checkboxElement.removeAttribute('checked');
+  if (!checkboxElement.classList.contains('booking__label--checked')) {
+    checkboxElement.classList.add('booking__label--checked');
     formSubmitElement.setAttribute('disabled', 'disabled');
+  } else {
+    checkboxElement.classList.remove('booking__label--checked');
+    formSubmitElement.removeAttribute('disabled');
   }
 });
 

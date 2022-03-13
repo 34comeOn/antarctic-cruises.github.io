@@ -17,6 +17,7 @@ html {
   line-height: 24px;
   font-family: $ff-placeholder;
   color: $color-default-black;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -68,6 +69,7 @@ textarea {
 
   &::placeholder {
     opacity: 1;
+    color: $color-dark-grey;
   }
 
   &:invalid {

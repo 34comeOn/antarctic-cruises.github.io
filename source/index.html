@@ -11,8 +11,8 @@
   </head>
 
 
-  <body>
-    <div class="wrapper wrapper--opened wrapper--nojs">
+  <body class="body">
+    <div class="wrapper wrapper--menu-opened wrapper--nojs">
       <header class="header">
         <div class="container header__container">
           <div class="header__toggle-wrapper">
@@ -41,22 +41,22 @@
           <nav class="header__navigation navigation">
             <ul class="navigation__list navigation__list--header list">
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--header content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#adv">
                   Преимущества
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--header content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#places">
                   Направления
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--header content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#cruises">
                   Ближайшие круизы
                 </a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link navigation__link--header content-reference" href="#">
+                <a class="navigation__link navigation__link--header content-reference" href="#contacts">
                   Контакты
                 </a>
               </li>
@@ -77,7 +77,7 @@
           </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="places">
           <div class="about__container container">
             <div class="about__description-middle">
               <div class="about__description-wrapper">
@@ -93,15 +93,15 @@
             </div>
             <div class="about__image-wrapper">
               <picture>
-                <source media="(max-width: 767px)" srcset="img/gallery/content/intro-mobile@1x.jpg 1x">
-                <source media="(max-width: 1170px)" srcset="img/gallery/content/intro-tablet@1x.jpg 1x">
-                <img class="about__image" width="560" height="301" src="img/gallery/content/intro-desktop@1x.jpg" alt="Фото трех пингвинов на снегу">
+                <source media="(max-width: 767px)" srcset="img/gallery/content/intro-mobile@1x.jpg 1x, img/gallery/content/intro-mobile@2x.jpg 2x">
+                <source media="(max-width: 1170px)" srcset="img/gallery/content/intro-tablet@1x.jpg 1x, img/gallery/content/intro-tablet@2x.jpg 2x">
+                <img class="about__image" width="560" height="301" src="img/gallery/content/intro-desktop@1x.jpg" srcset="img/gallery/content/intro-desktop@1x.jpg 1x, img/gallery/content/intro-desktop@2x.jpg 2x" alt="Фото трех пингвинов на снегу">
               </picture>
             </div>
           </div>
         </section>
 
-        <section class="advantages">
+        <section class="advantages" id="adv">
           <div class="advantages__container container">
             <h2 class="advantages__section-title">
               Преимущества
@@ -153,7 +153,7 @@
           </div>
         </section>
 
-        <section class="cruises">
+        <section class="cruises" id="cruises">
           <div class="cruises__container container">
             <h2 class="cruises__section-title">
               Ближайшие круизы
@@ -165,9 +165,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/astoria-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/astoria-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/astoria-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/astoria-mobile@1x.jpg 1x, img/gallery/content/cruises/astoria-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/astoria-tablet@1x.jpg 1x, img/gallery/content/cruises/astoria-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/astoria-desktop@1x.jpg" srcset="img/gallery/content/cruises/astoria-desktop@1x.jpg 1x, img/gallery/content/cruises/astoria-desktop@2x.jpg 2x" alt="Гора и лёд под ней">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -205,7 +205,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -216,9 +216,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/astoria-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1095px)" srcset="img/gallery/content/cruises/astoria-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/astoria-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/astoria-mobile@1x.jpg 1x, img/gallery/content/cruises/astoria-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/astoria-tablet@1x.jpg 1x, img/gallery/content/cruises/astoria-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/astoria-desktop@1x.jpg" srcset="img/gallery/content/cruises/astoria-desktop@1x.jpg 1x, img/gallery/content/cruises/astoria-desktop@2x.jpg 2x" alt="Гора и лёд под ней">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -256,7 +256,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -267,9 +267,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/atlantis-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/atlantis-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/atlantis-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/atlantis-mobile@1x.jpg 1x, img/gallery/content/cruises/atlantis-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/atlantis-tablet@1x.jpg 1x, img/gallery/content/cruises/atlantis-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/atlantis-desktop@1x.jpg" srcset="img/gallery/content/cruises/atlantis-desktop@1x.jpg 1x, img/gallery/content/cruises/atlantis-desktop@2x.jpg 2x" alt="Айсберги в воде">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -307,7 +307,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -318,9 +318,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/odyssey-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/odyssey-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/odyssey-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/odyssey-mobile@1x.jpg 1x, img/gallery/content/cruises/odyssey-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/odyssey-tablet@1x.jpg 1x,img/gallery/content/cruises/odyssey-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/odyssey-desktop@1x.jpg" srcset="img/gallery/content/cruises/odyssey-desktop@1x.jpg 1x, img/gallery/content/cruises/odyssey-desktop@2x.jpg 2x" alt="Заснеженные горы вдалеке и спокойная вода">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -358,7 +358,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -369,9 +369,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/olimpia-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/olimpia-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/olimpia-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/olimpia-mobile@1x.jpg 1x, img/gallery/content/cruises/olimpia-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/olimpia-tablet@1x.jpg 1x, img/gallery/content/cruises/olimpia-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/olimpia-desktop@1x.jpg" srcset="img/gallery/content/cruises/olimpia-desktop@1x.jpg 1x, img/gallery/content/cruises/olimpia-desktop@2x.jpg 2x" alt="Много пингвинов вдалеке стоят в очереди">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -409,7 +409,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -420,9 +420,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/aurora-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/aurora-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/aurora-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/aurora-mobile@1x.jpg 1x, img/gallery/content/cruises/aurora-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/aurora-tablet@1x.jpg 1x, img/gallery/content/cruises/aurora-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/aurora-desktop@1x.jpg" srcset="img/gallery/content/cruises/aurora-desktop@1x.jpg 1x, img/gallery/content/cruises/aurora-desktop@2x.jpg 2x" alt="побережье и ледяные глыбы в спокойной воде">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -460,7 +460,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -471,9 +471,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/leonor-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/leonor-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/leonor-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/leonor-mobile@1x.jpg 1x, img/gallery/content/cruises/leonor-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/leonor-tablet@1x.jpg 1x, img/gallery/content/cruises/leonor-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/leonor-desktop@1x.jpg" srcset="img/gallery/content/cruises/leonor-desktop@1x.jpg 1x, img/gallery/content/cruises/leonor-desktop@2x.jpg 2x" alt="Яхта на фоне заснеженных вершин">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -511,7 +511,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -522,9 +522,9 @@
                 </h3>
                 <div class="cruises__cover-wrapper">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/minion-mobile@1x.jpg 1x">
-                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/minion-tablet@1x.jpg 1x">
-                    <img class="cruises__image" width="260" height="386" src="img/gallery/content/cruises/minion-desktop@1x.jpg" alt="">
+                    <source media="(max-width: 767px)" srcset="img/gallery/content/cruises/minion-mobile@1x.jpg 1x, img/gallery/content/cruises/minion-mobile@2x.jpg 2x">
+                    <source media="(max-width: 1023px)" srcset="img/gallery/content/cruises/minion-tablet@1x.jpg 1x, img/gallery/content/cruises/minion-tablet@2x.jpg 2x">
+                    <img class="cruises__image" loading="lazy" width="260" height="386" src="img/gallery/content/cruises/minion-desktop@1x.jpg" srcset="img/gallery/content/cruises/minion-desktop@1x.jpg 1x, img/gallery/content/cruises/minion-desktop@2x.jpg 2x" alt="Заснеженные горы, спокойная вода, высадка людей из корабля">
                   </picture>
                 </div>
                 <div class="cruises__info-wrapper">
@@ -562,7 +562,7 @@
                       </span>
                     </li>
                   </ul>
-                  <a class="cruises__info-link button" href="#">
+                  <a class="cruises__info-link button" href="#booking">
                     Забронировать
                   </a>
                 </div>
@@ -571,7 +571,7 @@
           </div>
         </section>
 
-        <section class="booking">
+        <section class="booking" id="booking">
           <div class="booking__container container">
             <div class="booking__intro-wrapper">
               <h2 class="booking__section-title">
@@ -588,17 +588,17 @@
                 </h3>
                 <ul class="booking__list list">
                   <li class="booking__item">
-                    <input class="booking__input name-input" type="text" placeholder="Имя" aria-label="введите имя" required>
+                    <input class="booking__input name-input" type="text" placeholder="Имя" name="name" aria-label="введите имя" required>
                   </li>
                   <li class="booking__item">
-                    <input class="booking__input phone-input" type="tel" placeholder="Телефон" aria-label="введите телефон" required>
+                    <input class="booking__input phone-input" type="tel" placeholder="Телефон" name="phone" aria-label="введите телефон" required>
                   </li>
                   <li class="booking__item ">
-                    <input class="booking__input email-input" type="email" placeholder="Email" aria-label="введите почту" required>
+                    <input class="booking__input email-input" type="email" placeholder="Email" name="e-mail" aria-label="введите почту" required>
                   </li>
                   <li class="booking__item booking__item-checkbox">
                     <input class="booking__checkbox" type="checkbox" id="checkbox" name="confirm" aria-label="введите имя" checked="checked" required>
-                    <label class="booking__label" for="checkbox">Я согласен на обработку моих персональных данных</label>
+                    <label class="booking__label booking__label--checked" for="checkbox">Я согласен на обработку моих персональных данных</label>
                   </li>
                 </ul>
                 <button class="booking__button button" type="submit">
@@ -609,14 +609,17 @@
           </div>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
+          <h2 class="contacts__section-title visually-hidden">
+            Контакты турфирмы
+          </h2>
           <div class="contacts__container container">
             <div class="contacts__map-wrapper">
-              <a class="contacts__map contacts__map--desktop" href="https://yandex.ru/maps/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;width=560&amp;height=306&amp;lang=ru_RU" alt="" style="border: 0;" />
+              <a class="contacts__map contacts__map--desktop" href="https://yandex.ru/maps/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;source=constructorStatic" target="_blank"><img loading="lazy" width="560" height="306" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;width=560&amp;height=306&amp;lang=ru_RU" alt="Офис турфирмы на карте" style="border: 0;" />
               </a>
-              <a class="contacts__map contacts__map--tablet" href="https://yandex.ru/maps/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;width=324&amp;height=335&amp;lang=ru_RU" alt="" style="border: 0;" />
+              <a class="contacts__map contacts__map--tablet" href="https://yandex.ru/maps/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;source=constructorStatic" target="_blank"><img loading="lazy" width="324" height="335" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;width=324&amp;height=335&amp;lang=ru_RU" alt="Офис турфирмы на карте" style="border: 0;" />
               </a>
-              <a class="contacts__map contacts__map--mobile" href="https://yandex.ru/maps/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;width=290&amp;height=316&amp;lang=ru_RU" alt="" style="border: 0;" />
+              <a class="contacts__map contacts__map--mobile" href="https://yandex.ru/maps/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;source=constructorStatic" target="_blank"><img loading="lazy" width="290" height="316" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A396d84fe99fcf602ecdb1ba789900a3562fbbaaf061cb81f636988e6e2e43a9a&amp;width=290&amp;height=316&amp;lang=ru_RU" alt="Офис турфирмы на карте" style="border: 0;" />
               </a>
             </div>
             <div class="contacts__description-wrapper">
@@ -683,17 +686,17 @@
           <ul class="footer__sochials-list list">
             <li class="footer__sochials-item">
               <a class="footer__sochials-link" href="#">
-                <img class="footer__sochials-facebook" src="img/svg/facebook-desktop.svg" alt="Логотип Фейсбук">
+                <img class="footer__sochials-facebook" width="11" height="20" src="img/svg/facebook-desktop.svg" alt="Логотип Фейсбук">
               </a>
             </li>
             <li class="footer__sochials-item">
               <a class="footer__sochials-link" href="#">
-                <img class="footer__sochials-instagram" src="img/svg/instagram-desktop.svg" alt="Логотип Инстаграм">
+                <img class="footer__sochials-instagram" width="20" height="20" src="img/svg/instagram-desktop.svg" alt="Логотип Инстаграм">
               </a>
             </li>
             <li class="footer__sochials-item">
               <a class="footer__sochials-link" href="#">
-                <img class="footer__sochials-twitter" src="img/svg/twitter-desktop.svg" alt="Логотип Твитер">
+                <img class="footer__sochials-twitter" width="20" height="16" src="img/svg/twitter-desktop.svg" alt="Логотип Твитер">
               </a>
             </li>
           </ul>
