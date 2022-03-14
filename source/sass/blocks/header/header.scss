@@ -35,39 +35,23 @@
   position: relative;
 }
 
-.header__logo-desktop {
-  display: block;
-
+.header__logo {
   @include vp-1023 {
-    display: none;
-  }
-}
-
-.header__logo-tablet {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
+    width: 38px;
+    height: 20px;
   }
 
   @include vp-767 {
-    display: none;
+    width: 42px;
+    height: 22px;
   }
 }
 
-.header__logo-mobile {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.wrapper--menu-closed .header__logo-mobile {
+.wrapper--menu-closed .header__logo {
   fill: $color-default-white;
 }
 
-.wrapper--menu-opened .header__logo-mobile {
+.wrapper--menu-opened .header__logo {
   @include vp-767 {
     position: absolute;
     top: 0;
@@ -75,7 +59,7 @@
   }
 }
 
-.wrapper--nojs .header__logo-mobile {
+.wrapper--nojs .header__logo {
   @include vp-767 {
     position: static;
   }
