@@ -21,6 +21,20 @@
     min-width: 320px;
     background-image: url("../img/gallery/background/adv-background-mobile@1x.jpg");
   }
+
+  @include retina {
+    @include vp-1919 {
+      background-image: url("../img/gallery/background/adv-background-desktop@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/gallery/background/adv-background-tablet@2x.jpg");
+    }
+
+    @include vp-767 {
+      background-image: url("../img/gallery/background/adv-background-mobile@2x.jpg");
+    }
+  }
 }
 
 .advantages__section-title {

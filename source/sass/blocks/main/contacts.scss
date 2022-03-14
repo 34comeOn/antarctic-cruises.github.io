@@ -58,9 +58,24 @@
   }
 
   @include vp-767 {
+    background-image: url("/img/gallery/content/map/map-mobile@1x.jpg");
     max-width: 290px;
     min-width: 290px;
     height: 316px;
+  }
+
+  @include retina {
+    @include vp-1919 {
+      background-image: url("/img/gallery/content/map/map-desktop@2x.jpg");
+    }
+
+    @include vp-1023 {
+      background-image: url("/img/gallery/content/map/map-tablet@2x.jpg");
+    }
+
+    @include vp-767 {
+      background-image: url("/img/gallery/content/map/map-mobile@2x.jpg");
+    }
   }
 }
 
