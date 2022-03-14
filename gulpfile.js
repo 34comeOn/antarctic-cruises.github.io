@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
 const csso = require('gulp-csso');
+const htmlmin = require("gulp-htmlmin");
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -31,6 +32,13 @@ const css = () => {
       .pipe(gulp.dest('build/css'))
       .pipe(server.stream());
 };
+
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
 
 const js = () => {
   return gulp.src(['source/js/main.js'])
@@ -112,9 +120,6 @@ const refresh = (done) => {
   done();
 };
 
-const build = gulp.series(clean, svgo, copy, css, sprite, js);
-
-const start = gulp.series(build, syncServer);
 
 // Optional tasks
 //---------------------------------
@@ -134,12 +139,16 @@ const createWebp = () => {
 
 const optimizeImages = () => {
   return gulp.src('build/img/**/*.{png,jpg}')
-      .pipe(imagemin([
-        imagemin.optipng({optimizationLevel: 3}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
+  .pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
       ]))
       .pipe(gulp.dest('build/img'));
 };
+
+const build = gulp.series(clean, svgo, copy, optimizeImages, gulp.parallel(css, html, js, sprite, createWebp));
+
+const start = gulp.series(build, syncServer);
 
 exports.imagemin = optimizeImages;
 exports.webp = createWebp;

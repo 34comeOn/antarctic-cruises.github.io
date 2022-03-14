@@ -94,11 +94,16 @@
 }
 
 .about__image {
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+
+  @include vp-1023 {
+    width: 324px;
+    height: 264px;
+  }
 
   @include vp-767 {
-    max-width: 510px;
+    width: 290px;
+    height: 186px;
   }
 }
 

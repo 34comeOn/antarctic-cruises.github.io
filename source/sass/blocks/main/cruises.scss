@@ -80,6 +80,7 @@
 .cruises__image {
   width: 260px;
   height: 386px;
+  object-fit: cover;
 
   @include vp-1094 {
     width: 309px;
