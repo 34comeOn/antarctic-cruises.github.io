@@ -56,18 +56,13 @@
     position: absolute;
     top: 0;
     right: 210px;
+    fill: $color-default-black;
   }
 }
 
 .wrapper--nojs .header__logo {
   @include vp-767 {
     position: static;
-  }
-}
-
-.wrapper--menu-opened .header__logo-path {
-  @include vp-767 {
-    fill: $color-default-black;
   }
 }
 
