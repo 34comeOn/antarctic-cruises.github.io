@@ -135,7 +135,7 @@
   }
 }
 
-.contacts__slogan {
+.contacts__description-wrapper p {
   padding-top: 22px;
   font-size: 18px;
   line-height: 27px;
@@ -152,7 +152,7 @@
   }
 }
 
-.contacts__address {
+.contacts__description-wrapper span {
   font-size: 16px;
   line-height: 24px;
   padding-left: 29px;
@@ -182,7 +182,7 @@
   }
 }
 
-.contacts__phone {
+.contacts__description-wrapper a {
   font-size: 16px;
   line-height: 24px;
   padding-left: 29px;
@@ -202,7 +202,7 @@
   }
 }
 
-.contacts__br-tablet {
+.contacts__description-wrapper p br {
   display: none;
 
   @include vp-1279 {
@@ -214,7 +214,7 @@
   }
 }
 
-.contacts__br-address {
+.contacts__description-wrapper span br {
   display: none;
 
   @include vp-1279 {

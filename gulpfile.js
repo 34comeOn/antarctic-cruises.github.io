@@ -6,7 +6,6 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const server = require('browser-sync').create();
 const csso = require('gulp-csso');
-const htmlmin = require("gulp-htmlmin");
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -32,13 +31,6 @@ const css = () => {
       .pipe(gulp.dest('build/css'))
       .pipe(server.stream());
 };
-
-
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
-}
 
 const js = () => {
   return gulp.src(['source/js/main.js'])
@@ -146,7 +138,7 @@ const optimizeImages = () => {
       .pipe(gulp.dest('build/img'));
 };
 
-const build = gulp.series(clean, svgo, copy, optimizeImages, gulp.parallel(css, html, js, sprite, createWebp));
+const build = gulp.series(clean, svgo, copy, optimizeImages, gulp.parallel(css, js, sprite, createWebp));
 
 const start = gulp.series(build, syncServer);
 

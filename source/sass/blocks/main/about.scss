@@ -42,7 +42,7 @@
   }
 }
 
-.about__title {
+.about__description-wrapper h2 {
   font-size: 28px;
   line-height: 42px;
   font-family: $ff-placeholder-semibold;
@@ -60,7 +60,7 @@
   }
 }
 
-.about__text {
+.about__description-wrapper p {
   font-size: 16px;
   line-height: 24px;
   max-width: 512px;
@@ -76,7 +76,7 @@
   }
 }
 
-.about__br-tablet {
+.about__description-wrapper h2 br {
   display: none;
 
   @include vp-1023 {
@@ -93,7 +93,7 @@
   }
 }
 
-.about__image {
+.about__image-wrapper img {
   object-fit: cover;
 
   @include vp-1023 {
@@ -107,7 +107,7 @@
   }
 }
 
-.about__br-text {
+.about__description-wrapper p br {
   display: none;
 
   @include vp-1023 {

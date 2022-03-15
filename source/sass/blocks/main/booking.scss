@@ -64,7 +64,7 @@
   }
 }
 
-.booking__section-title {
+.booking__intro-wrapper h2 {
   padding-top: 129px;
   font-size: 41px;
   line-height: 60px;
@@ -89,7 +89,7 @@
   }
 }
 
-.booking__intro-text {
+.booking__intro-wrapper p {
   font-size: 18px;
   margin-top: -23px;
   line-height: 27px;
@@ -130,7 +130,7 @@
   }
 }
 
-.booking__input-title {
+.booking__feildset h3 {
   font-size: 18px;
   line-height: 27px;
   color: $color-default-white;
@@ -242,7 +242,23 @@
   }
 }
 
-.booking__br-desktop {
+.booking__intro-wrapper h2 br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.booking__intro-wrapper p br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.booking__intro-wrapper p br:nth-child(2) {
   display: block;
 
   @include vp-767 {
@@ -250,7 +266,7 @@
   }
 }
 
-.booking__br-mobile {
+.booking__feildset h3 br {
   display: none;
 
   @include vp-767 {
