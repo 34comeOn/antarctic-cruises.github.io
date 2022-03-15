@@ -36,7 +36,6 @@
       background-image: url("../img/gallery/background/adv-background-mobile@2x.jpg");
     }
   }
-
 }
 
 .advantages__container h2 {
@@ -221,10 +220,6 @@
 
   @include vp-1023 {
     display: block;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
 

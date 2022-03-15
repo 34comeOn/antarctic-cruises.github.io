@@ -1992,6 +1992,10 @@ button,
     z-index: -1;
   }
 
+  .navigation__list--footer {
+    margin-top: -7px;
+  }
+
   .wrapper--nojs .navigation__list--header {
     position: static;
   }
@@ -2147,10 +2151,6 @@ button,
   }
 
   .advantages__item:nth-child(2) p br:last-child {
-    display: none;
-  }
-
-  .advantages__item:last-child h3 br {
     display: none;
   }
 
