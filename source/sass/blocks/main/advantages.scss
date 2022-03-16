@@ -143,75 +143,11 @@
   }
 }
 
-.advantages__item:first-child p br:first-child {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.advantages__item:first-child p br:nth-child(2) {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.advantages__item:first-child p br:last-child {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
 .advantages__item:nth-child(2) h3 br {
   display: none;
 
   @include vp-1023 {
     display: block;
-  }
-}
-
-.advantages__item:nth-child(2) p br {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.advantages__item:nth-child(2) p br:first-child {
-  display: block;
-
-  @include vp-1023 {
-    display: none;
-  }
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.advantages__item:nth-child(2) p br:last-child {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
   }
 }
 
@@ -223,70 +159,34 @@
   }
 }
 
+.advantages__item:nth-child(2) p br:first-child {
+  display: block;
+
+  @include vp-1169 {
+    display: none;
+  }
+}
+
+.advantages__item:nth-child(2) p br:last-child {
+  display: none;
+
+  @include vp-374 {
+    display: block;
+  }
+}
+
+.advantages__item:last-child p br {
+  display: block;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
 .advantages__item:last-child p br:first-child {
   display: none;
 
-  @include vp-1023 {
+  @include vp-374 {
     display: block;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.advantages__item:last-child p br:nth-child(2) {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.advantages__item:last-child p br:nth-child(3) {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.advantages__item:last-child p br:nth-child(4) {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
-
-.advantages__item:last-child p br:nth-child(5) {
-  display: block;
-
-  @include vp-1023 {
-    display: none;
-  }
-}
-
-.advantages__item:last-child p br:nth-child(6) {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.advantages__item:last-child p br:last-child {
-  display: block;
-
-  @include vp-1023 {
-    display: none;
   }
 }

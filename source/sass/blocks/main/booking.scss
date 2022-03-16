@@ -113,7 +113,7 @@
   position: relative;
   background-color: $color-dark-blue;
   width: 403px;
-  height: 455px;
+  min-height: min-content;
   padding: 50px;
   box-sizing: border-box;
 
@@ -221,6 +221,12 @@
     width: 157px;
     padding-left: 4px;
     display: block;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $color-grey;
+    }
   }
 }
 

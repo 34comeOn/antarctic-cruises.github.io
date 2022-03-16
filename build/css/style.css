@@ -451,6 +451,10 @@ body {
 a {
   color: #000000;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img,
@@ -669,7 +673,6 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 100%;
   position: relative;
 }
 
@@ -737,6 +740,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .navigation__item {
@@ -934,23 +939,11 @@ button,
   display: none;
 }
 
-.advantages__item:first-child p br:first-child {
-  display: none;
-}
-
-.advantages__item:first-child p br:nth-child(2) {
-  display: none;
-}
-
-.advantages__item:first-child p br:last-child {
-  display: none;
-}
-
 .advantages__item:nth-child(2) h3 br {
   display: none;
 }
 
-.advantages__item:nth-child(2) p br {
+.advantages__item:last-child h3 br {
   display: none;
 }
 
@@ -962,36 +955,12 @@ button,
   display: none;
 }
 
-.advantages__item:last-child h3 br {
-  display: none;
+.advantages__item:last-child p br {
+  display: block;
 }
 
 .advantages__item:last-child p br:first-child {
   display: none;
-}
-
-.advantages__item:last-child p br:nth-child(2) {
-  display: none;
-}
-
-.advantages__item:last-child p br:nth-child(3) {
-  display: none;
-}
-
-.advantages__item:last-child p br:nth-child(4) {
-  display: none;
-}
-
-.advantages__item:last-child p br:nth-child(5) {
-  display: block;
-}
-
-.advantages__item:last-child p br:nth-child(6) {
-  display: none;
-}
-
-.advantages__item:last-child p br:last-child {
-  display: block;
 }
 
 .cruises__container {
@@ -1181,7 +1150,9 @@ button,
   position: relative;
   background-color: #011c40;
   width: 403px;
-  height: 455px;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
   padding: 50px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1253,6 +1224,10 @@ button,
   background-image: url("/img/svg/checkbox.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.booking__label:hover::before {
+  background-color: #d8d8d9;
 }
 
 .booking__checkbox:not(:checked) + label::before {
@@ -1444,10 +1419,13 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 117px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-right: -15px;
 }
 
 .footer__sochials-item {
@@ -1457,6 +1435,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 51px;
 }
 
 .footer__sochials-link {
@@ -1466,6 +1445,11 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.footer__sochials-image {
+  margin: 0 auto;
 }
 
 .footer__sochials-image:hover {
@@ -1547,6 +1531,10 @@ button,
 }
 
 @media (max-width: 1169px) {
+  .advantages__item:nth-child(2) p br:first-child {
+    display: none;
+  }
+
   .booking__container {
     padding-left: 140px;
     padding-right: 140px;
@@ -1743,23 +1731,7 @@ button,
     display: block;
   }
 
-  .advantages__item:first-child p br:nth-child(2) {
-    display: block;
-  }
-
-  .advantages__item:first-child p br:last-child {
-    display: block;
-  }
-
   .advantages__item:nth-child(2) h3 br {
-    display: block;
-  }
-
-  .advantages__item:nth-child(2) p br:first-child {
-    display: none;
-  }
-
-  .advantages__item:nth-child(2) p br:last-child {
     display: block;
   }
 
@@ -1767,23 +1739,7 @@ button,
     display: block;
   }
 
-  .advantages__item:last-child p br:first-child {
-    display: block;
-  }
-
-  .advantages__item:last-child p br:nth-child(3) {
-    display: block;
-  }
-
-  .advantages__item:last-child p br:nth-child(5) {
-    display: none;
-  }
-
-  .advantages__item:last-child p br:nth-child(6) {
-    display: block;
-  }
-
-  .advantages__item:last-child p br:last-child {
+  .advantages__item:last-child p br {
     display: none;
   }
 
@@ -1883,7 +1839,11 @@ button,
   }
 
   .footer__sochials-list {
-    width: 87px;
+    margin-right: -10px;
+  }
+
+  .footer__sochials-item {
+    width: 38px;
   }
 
   .footer__sochials-facebook {
@@ -1952,6 +1912,10 @@ button,
     align-items: flex-start;
   }
 
+  .header__toggle-wrapper {
+    width: 100%;
+  }
+
   .header__logo {
     width: 42px;
     height: 22px;
@@ -1994,6 +1958,9 @@ button,
 
   .navigation__list--footer {
     margin-top: -7px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-height: 145px;
   }
 
   .wrapper--nojs .navigation__list--header {
@@ -2030,6 +1997,7 @@ button,
   .navigation__item--footer {
     margin-left: 0;
     line-height: 22px;
+    margin-right: 15px;
   }
 
   .wrapper--nojs .main {
@@ -2128,50 +2096,6 @@ button,
 
   .advantages__icon-wrapper {
     height: 30px;
-  }
-
-  .advantages__item:first-child p br:first-child {
-    display: block;
-  }
-
-  .advantages__item:first-child p br:nth-child(2) {
-    display: none;
-  }
-
-  .advantages__item:first-child p br:last-child {
-    display: none;
-  }
-
-  .advantages__item:nth-child(2) p br {
-    display: block;
-  }
-
-  .advantages__item:nth-child(2) p br:first-child {
-    display: block;
-  }
-
-  .advantages__item:nth-child(2) p br:last-child {
-    display: none;
-  }
-
-  .advantages__item:last-child p br:first-child {
-    display: none;
-  }
-
-  .advantages__item:last-child p br:nth-child(2) {
-    display: block;
-  }
-
-  .advantages__item:last-child p br:nth-child(3) {
-    display: none;
-  }
-
-  .advantages__item:last-child p br:nth-child(4) {
-    display: block;
-  }
-
-  .advantages__item:last-child p br:nth-child(6) {
-    display: none;
   }
 
   .cruises__container {
@@ -2362,6 +2286,7 @@ button,
 
   .footer__sochials-list {
     height: 21px;
+    margin-left: -15px;
   }
 }
 
@@ -2380,5 +2305,15 @@ button,
 
   .contacts__map-wrapper {
     background-image: url("/img/gallery/content/map/map-mobile@2x.jpg");
+  }
+}
+
+@media (max-width: 374px) {
+  .advantages__item:nth-child(2) p br:last-child {
+    display: block;
+  }
+
+  .advantages__item:last-child p br:first-child {
+    display: block;
   }
 }
