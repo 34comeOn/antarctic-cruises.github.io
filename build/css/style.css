@@ -709,9 +709,9 @@ button,
 .wrapper--menu-opened .header__toggle::after {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 0;
-  width: 25px;
+  top: 7px;
+  right: -3px;
+  width: 18px;
   height: 2px;
   background-color: #000000;
   cursor: pointer;
@@ -1927,8 +1927,8 @@ button,
 
   .wrapper--menu-opened .header__logo {
     position: absolute;
-    top: 0;
-    right: 210px;
+    top: -3px;
+    right: 213px;
     fill: #000000;
   }
 
@@ -1980,13 +1980,16 @@ button,
     display: -ms-flexbox;
     display: flex;
     width: 285px;
-    height: 493px;
-    padding-top: 75px;
+    height: 568px;
+    padding-top: 85px;
   }
 
   .navigation__item {
     padding-bottom: 10px;
-    margin-left: 22px;
+  }
+
+  .navigation__item--header {
+    padding-bottom: 26px;
   }
 
   .navigation__item--header a {
@@ -1995,7 +1998,6 @@ button,
     line-height: 22px;
     font-family: "Montserrat-Semibold", "Arial", sans-serif;
     font-weight: 500;
-    margin-left: 20px;
   }
 
   .navigation__item--footer {

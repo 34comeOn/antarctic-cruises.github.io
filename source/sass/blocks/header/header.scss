@@ -57,8 +57,8 @@
 .wrapper--menu-opened .header__logo {
   @include vp-767 {
     position: absolute;
-    top: 0;
-    right: 210px;
+    top: -3px;
+    right: 213px;
     fill: $color-default-black;
   }
 }
@@ -100,9 +100,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 0;
-    width: 25px;
+    top: 7px;
+    right: -3px;
+    width: 18px;
     height: 2px;
     background-color: $color-default-black;
     cursor: pointer;
