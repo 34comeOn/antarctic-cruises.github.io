@@ -228,6 +228,12 @@
       background-color: $color-grey;
     }
   }
+
+  &:focus {
+    &::before {
+      outline: 3px solid $color-default-black;
+    }
+  }
 }
 
 .booking__checkbox:not(:checked) + label::before {

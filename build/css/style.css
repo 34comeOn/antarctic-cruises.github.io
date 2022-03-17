@@ -1230,6 +1230,10 @@ button,
   background-color: #d8d8d9;
 }
 
+.booking__label:focus::before {
+  outline: 3px solid #000000;
+}
+
 .booking__checkbox:not(:checked) + label::before {
   background-image: none;
 }

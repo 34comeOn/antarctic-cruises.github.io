@@ -60,3 +60,25 @@ labelElement.addEventListener('click', function () {
 validateInput(nameInputElement, nameInputRe, 'Здесь могут быть только буквы');
 validateInput(phoneInputElement, phoneInputRe, 'Здесь могут быть только цифры');
 validateInput(emailInputElement, emailInputRe, 'Впишите пожалуйста электронный адрес корректно');
+
+const isEnterKey = (evt) => (
+  evt.key === 'Enter'
+);
+
+const pushLabel = () => {
+  if (!checkboxElement.classList.contains('booking__label--checked')) {
+    checkboxElement.classList.add('booking__label--checked');
+    formSubmitElement.setAttribute('disabled', 'disabled');
+  } else {
+    checkboxElement.classList.remove('booking__label--checked');
+    formSubmitElement.removeAttribute('disabled');
+  }
+};
+
+const onLabelEnterKeydown = (evtClose) => {
+  if (isEnterKey(evtClose)) {
+    pushLabel();
+  }
+};
+
+labelElement.addEventListener('keydown', onLabelEnterKeydown);
