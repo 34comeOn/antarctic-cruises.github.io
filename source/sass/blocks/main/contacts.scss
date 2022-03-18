@@ -188,6 +188,23 @@
   padding-left: 29px;
   display: block;
   position: relative;
+  width: 174px;
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: fill-available;
+      background-color: $color-dark-blue;
+      top: 23px;
+      left: 0;
+    }
+  }
+
+  &:focus {
+    background-color: $color-grey;
+  }
 
   &::before {
     content: "";

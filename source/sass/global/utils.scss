@@ -7,16 +7,16 @@
   overflow: hidden;
 
   display: grid;
-  grid-template-rows: min-content 1fr 138px;
+  grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr;
 
   @include vp-1023 {
-    grid-template-rows: min-content 1fr 120px;
+    grid-template-rows: min-content 1fr min-content;
     grid-template-columns: 1fr;
   }
 
   @include vp-767 {
-    grid-template-rows: min-content 1fr 283px;
+    grid-template-rows: min-content 1fr min-content;
     grid-template-columns: 1fr;
   }
 }
@@ -68,4 +68,5 @@
   font-family: $ff-placeholder-semibold;
   font-weight: 600;
   background-color: $color-default-white;
+  user-select: none;
 }

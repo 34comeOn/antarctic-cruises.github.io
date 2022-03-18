@@ -19,6 +19,10 @@
   }
 }
 
+.header__link {
+  pointer-events: none;
+}
+
 .wrapper--nojs .header__container {
   @include vp-767 {
     height: min-content;

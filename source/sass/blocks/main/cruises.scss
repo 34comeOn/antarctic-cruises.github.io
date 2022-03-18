@@ -64,8 +64,9 @@
   position: relative;
   background-color: $color-dark-blue;
   width: 260px;
-  min-height: 386px;
-  height: min-content;
+  height: 386px;
+
+
   box-sizing: border-box;
 
   @include vp-1094 {
@@ -115,15 +116,19 @@
 }
 
 .cruises__item:hover h3 {
-  top: 12px;
+  position: relative;
+  margin-bottom: -44px;
+  top: 11px;
   left: 24px;
 
   @include vp-1023 {
-    top: 11px;
+    margin-bottom: -47px;
+    top: 9px;
     left: 34px;
   }
 
   @include vp-767 {
+    margin-bottom: -44px;
     top: 11px;
     left: 26px;
   }
@@ -142,8 +147,9 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  height: min-content;
-  min-height: 386px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 386px;
 
   @include vp-1023 {
     padding-left: 35px;
@@ -152,6 +158,10 @@
   @include vp-767 {
     padding: 35px 25px;
     padding-top: 59px;
+  }
+
+  &:focus {
+    outline: 1px solid red;
   }
 }
 
