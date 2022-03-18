@@ -70,3 +70,9 @@
   background-color: $color-default-white;
   user-select: none;
 }
+
+.menu-opened {
+  height: 100vh;
+  overflow: hidden;
+  background: $color-menu-opened;
+}

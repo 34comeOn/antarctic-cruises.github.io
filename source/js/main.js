@@ -13,9 +13,11 @@ navToggleElement.addEventListener('click', function () {
   if (mainWrapperElement.classList.contains('wrapper--menu-closed')) {
     mainWrapperElement.classList.remove('wrapper--menu-closed');
     mainWrapperElement.classList.add('wrapper--menu-opened');
+    document.body.classList.add('menu-opened');
   } else {
     mainWrapperElement.classList.add('wrapper--menu-closed');
     mainWrapperElement.classList.remove('wrapper--menu-opened');
+    document.body.classList.remove('menu-opened');
   }
 });
 

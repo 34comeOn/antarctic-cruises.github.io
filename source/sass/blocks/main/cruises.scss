@@ -63,19 +63,43 @@
 .cruises__item {
   position: relative;
   background-color: $color-dark-blue;
-  width: 260px;
   height: 386px;
-
+  width: 260px;
+  display: grid;
+  grid-template-rows: 386px;
+  grid-template-columns: 260px;
 
   box-sizing: border-box;
 
   @include vp-1094 {
     width: 309px;
+    grid-template-columns: 309px;
   }
 
   @include vp-767 {
     width: 270px;
+    grid-template-columns: 270px;
   }
+
+  &:hover {
+    box-shadow: 0 0 15px 8px $color-dark-grey;
+    outline: 2px solid $color-grey;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 15px 7px $color-dark-blue;
+    outline: 1px solid $color-dark-blue;
+  }
+}
+
+.cruises__item:focus-within .cruises__cover-wrapper {
+  display: none;
+}
+
+.cruises__cover-wrapper {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  z-index: 2;
 }
 
 .cruises__cover-wrapper img {
@@ -94,7 +118,7 @@
   }
 }
 
-.cruises__item h3 {
+.cruises__cover-wrapper h3 {
   position: absolute;
   color: $color-default-white;
   bottom: 2px;
@@ -115,22 +139,16 @@
   }
 }
 
-.cruises__item:hover h3 {
-  position: relative;
-  margin-bottom: -44px;
-  top: 11px;
-  left: 24px;
+.cruises__description-item h3 {
+  padding-bottom: 5px;
+  color: $color-default-white;
+  font-family: $ff-placeholder;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 
   @include vp-1023 {
-    margin-bottom: -47px;
-    top: 9px;
-    left: 34px;
-  }
-
-  @include vp-767 {
-    margin-bottom: -44px;
-    top: 11px;
-    left: 26px;
+    padding-bottom: 1px;
   }
 }
 
@@ -138,35 +156,34 @@
   display: none;
 }
 
-.cruises__item:hover .cruises__info-wrapper {
-  display: flex;
-}
-
 .cruises__info-wrapper {
-  padding: 59px 15px 35px 25px;
-  display: none;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  padding: 20px 15px 35px 25px;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-x: hidden;
-  overflow-y: scroll;
   height: 386px;
 
-  @include vp-1023 {
+  @include vp-1094 {
     padding-left: 35px;
   }
 
   @include vp-767 {
     padding: 35px 25px;
-    padding-top: 59px;
-  }
-
-  &:focus {
-    outline: 1px solid red;
+    padding-top: 23px;
   }
 }
 
 .cruises__description-list {
-  padding-bottom: 23px;
+  margin-bottom: 32px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &:focus {
+    box-shadow: 0 0 15px 7px $color-dark-grey;
+    outline: none;
+  }
 }
 
 .cruises__description-item {
@@ -198,7 +215,7 @@
   padding-top: 10px;
   z-index: 1;
 
-  @include vp-1023 {
+  @include vp-1094 {
     width: 239px;
   }
 
@@ -208,5 +225,9 @@
 
   &:hover {
     background-color: $color-dark-grey;
+  }
+
+  &:focus {
+    background-color: $color-input-focus;
   }
 }
