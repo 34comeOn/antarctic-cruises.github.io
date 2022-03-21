@@ -1,5 +1,6 @@
 const mainWrapperElement = document.querySelector('.wrapper');
 const navToggleElement = document.querySelector('.header__toggle');
+const headerMenuElement = document.querySelector('.navigation__list--header');
 const nameInputElement = document.querySelector('.name-input');
 const phoneInputElement = document.querySelector('.phone-input');
 const emailInputElement = document.querySelector('.email-input');
@@ -8,6 +9,12 @@ const checkboxElement = document.querySelector('.booking__checkbox');
 const labelElement = document.querySelector('.booking__label');
 
 mainWrapperElement.classList.remove('wrapper--nojs');
+
+const closeMenu = () => {
+  document.body.classList.remove('menu-opened');
+  mainWrapperElement.classList.add('wrapper--menu-closed');
+  mainWrapperElement.classList.remove('wrapper--menu-opened');
+};
 
 navToggleElement.addEventListener('click', function () {
   if (mainWrapperElement.classList.contains('wrapper--menu-closed')) {
@@ -21,7 +28,19 @@ navToggleElement.addEventListener('click', function () {
   }
 });
 
-const nameInputRe = /[A-Za-zA-Яа-яЁё\s]$/;
+headerMenuElement.addEventListener('click', function (evt) {
+  if (evt.target.nodeName === 'A' && mainWrapperElement.classList.contains('wrapper--menu-opened')) {
+    closeMenu();
+  }
+});
+
+document.addEventListener('click', function (evt) {
+  if (!evt.target.closest('.header__container') && mainWrapperElement.classList.contains('wrapper--menu-opened')) {
+    closeMenu();
+  }
+});
+
+const nameInputRe = /[A-Za-zA-Яа-яЁё0-9\s]$/;
 const phoneInputRe = /[0-9]$/;
 const emailInputRe = /\S+@\S+\.\S+/;
 
@@ -49,7 +68,7 @@ const validateInput = (element, re, text) => {
   });
 };
 
-labelElement.addEventListener('click', function () {
+const onLabelClick = () => {
   if (!checkboxElement.classList.contains('booking__label--checked')) {
     checkboxElement.classList.add('booking__label--checked');
     formSubmitElement.setAttribute('disabled', 'disabled');
@@ -57,9 +76,13 @@ labelElement.addEventListener('click', function () {
     checkboxElement.classList.remove('booking__label--checked');
     formSubmitElement.removeAttribute('disabled');
   }
+};
+
+labelElement.addEventListener('click', function () {
+  onLabelClick();
 });
 
-validateInput(nameInputElement, nameInputRe, 'Здесь могут быть только буквы');
+validateInput(nameInputElement, nameInputRe, 'Здесь могут быть только буквы и цифры');
 validateInput(phoneInputElement, phoneInputRe, 'Здесь могут быть только цифры');
 validateInput(emailInputElement, emailInputRe, 'Впишите пожалуйста электронный адрес корректно');
 
@@ -68,13 +91,7 @@ const isEnterKey = (evt) => (
 );
 
 const pushLabel = () => {
-  if (!checkboxElement.classList.contains('booking__label--checked')) {
-    checkboxElement.classList.add('booking__label--checked');
-    formSubmitElement.setAttribute('disabled', 'disabled');
-  } else {
-    checkboxElement.classList.remove('booking__label--checked');
-    formSubmitElement.removeAttribute('disabled');
-  }
+  onLabelClick();
 };
 
 const onLabelEnterKeydown = (evtClose) => {

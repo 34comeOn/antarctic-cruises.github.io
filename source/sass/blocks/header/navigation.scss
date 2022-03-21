@@ -87,7 +87,7 @@
 
 .navigation__item--header {
   @include vp-767 {
-    padding-bottom: 26px
+    padding-bottom: 26px;
   }
 }
 
@@ -96,7 +96,7 @@
     color: $color-default-black;
     font-size: 18px;
     line-height: 22px;
-    font-family: $ff-placeholder-semibold;
+    font-family: $ff-placeholder-medium;
     font-weight: 500;
   }
 }
@@ -114,12 +114,17 @@
 }
 
 .navigation__item--footer {
+  margin-bottom: 10px;
+  margin-top: 10px;
+
   @include vp-1023 {
     margin-left: 24px;
+    margin-bottom: 7px;
+    margin-top: 7px;
   }
 
   @include vp-767 {
-    margin-left: 0;
+    margin: 0;
     line-height: 22px;
     margin-right: 15px;
   }
