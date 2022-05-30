@@ -5,7 +5,7 @@ Tools & technologies:
 -Figma
 -HTML 
 -CSS 
--JS  
+-JS 
 -Git 
 -Gulp 
 -BEM 
