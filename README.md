@@ -1,3 +1,17 @@
+1st developing skills project "Antarctic-cruises" (adaptive layout).
+
+Tools & technologies:
+
+-Figma
+-HTML 
+-CSS 
+-JS  
+-Git 
+-Gulp 
+-BEM 
+-Sass
+
+
 ## [Гайд по работе со сборкой](/GUIDE.md) 📕
 
 ## Краткая инструкция по работе
